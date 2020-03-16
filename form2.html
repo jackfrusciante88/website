@@ -1,0 +1,75 @@
+<html>
+    <head>
+            <title>form test2</title>
+    </head>
+    <body>
+        <h1>Registrazione</h1>
+        <form id='form_reg' method='GET'>
+            <p>
+                <label>
+                    Nome: 
+                    <input name='nome' type='text' required>
+                </label>
+                <label>
+                    Cognome: 
+                    <input name='cognome' type='text' required>
+                </label>
+            </p>
+            <p>
+                Sesso:
+                <input id="uomo" name='sex' type='radio' value='uomo'>
+                <label for="uomo">Uomo:</label>
+                <input id="donna" name='sex' type='radio' value='donna'>
+                <label for="donna">Donna:</label>
+                <input id="indeciso" name='sex' type='radio' value='indeciso'>
+                <label for="indeciso">Indeciso:</label>
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input id='email' name='email' type='email' placeholder='email' required>
+                <label for="password">Password:</label>
+                <input id='password' name='password' type='password' placeholder='Password' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input id='email' name='email' type='email' placeholder='email' required>
+ 
+            </p>
+            <p>
+                <label for='compleanno'>Compleanno:</label>
+                <select name='giorno' >
+                    <option value='0' disabled selected hidden>Giorno</option>
+                    <option value='1'>Primo</option>
+                    <option value='2'>Secondo</option>
+                    <option value='3'>Terzo</option>
+                    <option value='4'>Quarto</option>
+                    <option value='5'>Quinto</option>
+                </select>
+                <select name='mese' >
+                    <option value='0' disabled selected hidden>Mese</option>
+                    <option value='1'>Gennaio</option>
+                    <option value='2'>Febbraio</option>
+                    <option value='3'>Marzo</option>
+                    <option value='4'>Aprile</option>
+                    <option value='5'>Maggio</option>
+                </select>
+                <select name='anno' >
+                    <option value='0' disabled selected hidden>Anno</option>
+                    <option value='1'>1988</option>
+                    <option value='2'>1989</option>
+                    <option value='3'>1990</option>
+                    <option value='4'>1991</option>
+                    <option value='5'>1992</option>
+                </select>
+            </p>
+            <p>
+                <label for="agree">Accetto i termini e Condizioni del Servizio:</label>
+                <input id='agree' name='agree' type='checkbox' required>
+            </p>
+
+            <p>
+                <input name='invio' type='submit' value='invia'> 
+            </p>
+        </form>
+    </body>
+</html>
