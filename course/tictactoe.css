@@ -1,0 +1,33 @@
+body{
+    font-family: 'Baloo 2', cursive;
+}
+div {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    
+}
+h1{
+    font-size: 4em;
+    color: blue;
+
+}
+table {
+    font-size: 34em;
+    text-align: center;
+    margin: auto;
+
+}
+
+td{
+    width:100px;
+    height: 100px;
+}
+
+td:nth-child(n+2){
+    border-left: 2px solid black;
+}
+tr:nth-child(n+2) td{
+    border-top: 2px solid black;
+    
+}

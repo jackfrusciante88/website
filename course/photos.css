@@ -1,0 +1,22 @@
+body{
+    font-family: 'Baloo 2', cursive;
+}
+
+img{
+    width:30%;
+    float: left;
+    margin:1.66%;
+}
+
+#title{
+    margin-left: 1.66%;
+    font-size: 3.6 vw;
+    font-weight : 500;
+    text-transform: uppercase;
+    border-bottom: 4px solid black;
+    width: 30%;
+/*
+ #gallery{
+    padding:1%
+} 
+*/
