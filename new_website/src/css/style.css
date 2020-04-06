@@ -1,10 +1,27 @@
+html {
+    /* height: 100vh; */
+    font-size: 10px;
+}
+
 body {
     font-family: 'Roboto Mono', monospace;
     color: white;
     background-color: black;
+    letter-spacing: 0.8px;
+
+/*
+    position: absolute;
+    margin: 0px;
+    overflow: hidden ;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+*/
+
+}
+header{
 }
 footer {
-    background-color: aqua;
 }
 
 a{
@@ -12,26 +29,65 @@ a{
     color:  inherit;
 }
 
+*{
+    border: solid red 1px;
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3rem;
+}
+h3{
+    font-size: 2rem;
+}
+/*  --- WRAPPER---  */
+.container{
+    padding: 0vmin 4vmin;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 98vh;
+    font-weight: 300;    
+    font-size: 1.1rem;
+    margin: 1vh;
+}
+
+.bright{
+    background-color: white;
+    color: black;
+}
 /* --- NAVBAR CLASSES --- */
 
-.navbar{
-    padding: 30px 0px;       
-    position:fixed;
+.header-container{
+    padding: 3vmin 0vmin;       
+    position: sticky;
     top: 0px;
-    width:100%;
+    background-color: inherit;
 }
 .navbar-nav{
     display: flex;    
     justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
-    font-size: 2vmin;
     list-style: none;
+    font-size: 2rem;
+
 }
 
+.navbar-nav > li {
+    flex-grow: 1;
+    text-align: center;
+    border-right: solid  0.1vmin;
+}
+
+.navbar-nav > li:last-of-type {
+    border-right: none;
+}
 
 .navbar-nav > li > a {
-    padding: 0px 15px;
-    border-right: solid white 0.2vmin;
+    padding: 0px 10px;
     white-space: nowrap;
 }
 
@@ -40,18 +96,83 @@ a{
     font-weight: 700;
 }
 
-.navbar-nav > li:last-of-type > a {
-    border-right: none;
+/*  --- FOOTER SECTION ---  */
+.footer-container{
+    padding: 3vmin 0vmin;
+    position: unset;
+    bottom: 0px;
 }
 
-/*  --- IMAGE SECTION ---  */
-.image-container{    
-    font-family: 'Roboto', sans-serif;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url("../img/background-code.jpg");
-    background-size: 100% auto;
-    background-color: green;
-    height: 500px;
+/*  --- MIDDLE SECTION ---  */
+.central-container {
+    height: 100%;
 }
+
+
+    /*  --- HOME ---*/
+    .home-block{
+        position:relative;
+        height: 100%;
+
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+
+    }
+    
+    .background-image{
+        background-image: url("../img/test.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-color:transparent;
+        background-position-x: center;
+        background-position-y: top;
+        background-size: contain;
+    }
+
+    /* .image-container{    
+        height : 50%;
+    }
+
+    .image-container img{
+        max-width: 700px;
+    } */
+
+    .typing-container{    
+        height : 50%;
+        font-family: 'Roboto', Helvetica, Arial, sans-serif;
+        font-size: 4vmin;
+    }
+
+    /*  ---ABOUT --*/
+    .about-block {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        justify-content: flex-start;
+        height: 100%;
+    }
+
+    .about-block .title{
+        display: block;
+        align-self: center;
+
+
+    }
+
+    .about-block .description{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+
+    .about-block > .description > article{
+            max-width: 1000px;
+    }
+    

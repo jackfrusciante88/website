@@ -5923,5 +5923,8 @@ textarea {
     margin-right: 5px
 }
 
+*{
+    border: solid red 1 px !important;
+}
 
 /*# sourceMappingURL=main.70a66962.map*/
