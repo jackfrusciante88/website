@@ -1,3 +1,4 @@
 export const  elements = {
-     navbar : document.querySelector('navbar-nav'),
+     menuItem : document.querySelector('.navbar-nav').querySelectorAll('li'),
+     central: document.querySelector('.central-container'),
 }
