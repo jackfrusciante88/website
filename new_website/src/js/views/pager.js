@@ -1,4 +1,5 @@
-export const  pages = {
+import { elements } from "./base";
+export const  pagerView = {
     home : `<div class="home-block background-image">
                 <div class="container typing-container">
                     <h1>Hello Recruiter</h1>
@@ -23,7 +24,18 @@ export const  pages = {
                     <img src="img/pinguino.png">
                 </div>
             </div>`,
-    works : ``,
-    skills : ``,
-    contact : ``,
+    works : `<h2>hello world</h2>`,
+    skills : `<h2>hello world</h2>`,
+    contact : `<h2>hello world</h2>`,
+
+    clear(){
+        elements.central.removeChild(elements.central.firstElementChild)
+    },
+
+    insert(section){
+        elements.central.insertAdjacentHTML("afterbegin", this[section]);
+        elements.wrapper.classList.toggle("bright",section!='home')
+    }
+
 }
+
