@@ -1,5 +1,6 @@
 import { elements } from "./views/base";
 import { pagerView } from "./views/pager";
+import { typeView } from "./views/typeView";
 
 import { pagerController } from "./models/pagerController";
 import { typeController } from "./models/typeController";
@@ -52,10 +53,10 @@ function router (page){
     
     if (page =='home'){
         //carica scritta typewriting
+        typeView.renderBar(document.getElementById('typeMessage') , data.message)
     }
     
     
-    // if home document.querySelector('.wrapper').classList.toggle("bright");
 }
 
 const init = ()=>{
@@ -66,9 +67,12 @@ const init = ()=>{
     window.history.replaceState(data.state, data.state.currentPage, "");
 
     // load status home message from param or cookies
-    typeController.setMessage2(data);
+    typeController.setMessage(data);
 
-    console.log(data)
+    //carica scritta typewriting
+    typeView.renderBar(document.getElementById('typeMessage') , data.message);
+
+    console.log(data);
 };
 
 

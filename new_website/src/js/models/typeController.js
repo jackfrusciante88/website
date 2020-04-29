@@ -4,7 +4,7 @@
 export const typeController = {
     
     //set the message in memory
-    setMessage2(data){
+    setMessage(data){
         let message;
         try{
             let url = new URL(window.location.href);
@@ -16,13 +16,14 @@ export const typeController = {
             if(localStorage.getItem('homeMessage')){
                 message = atob(localStorage.getItem('homeMessage'));
             }else {
-                message = 'messaggio di default'
+                message = 'Welcome dear Visitor'
             }
         }
         finally{
-            console.log('il valore attuale codificato di me '+message)
             data.message = message;
             localStorage.setItem('homeMessage', btoa(message) )
         }
     },
+
+
 }
